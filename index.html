@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+      $(function() {
+          $.scrollify({
+            section : "section",
+          });
+        });
+        $.scrollify({
+          section : "section",
+          sectionName : "section-name",
+          interstitialSection : "",
+          easing: "easeOutExpo",
+          scrollSpeed: 200,
+          offset : 0,
+          scrollbars: true,
+          standardScrollElements: "",
+          setHeights: true,
+          overflowScroll: true,
+          updateHash: true,
+          touchScroll:true,
+          before:function() {},
+          after:function() {},
+          afterResize:function() {},
+          afterRender:function() {}
+        });
+    </script>
+</head>
+<body>
+  <main>
+          
+      <!-- First Section -->
+      <section id="landing" class="landing p-0 position-relative">
+        <!-- Background Images -->
+        <div class="container-fluid position-absolute d-none d-md-block web-developer-images pt-2" style="z-index: -1;">
+            
+            <img src="./assets/img/web-text-dashed.svg" class="img w-25 mx-auto d-block" id="web-img">
+
+            <img src="./assets/img/background-text.svg" class="img-fluid" style="filter:drop-shadow(10px 10px 7px rgba(184, 184, 184, 0.158))" id="developer-img">
+            
+            
+          
+          
+        </div>
+        <!-- Text and Buttons  -->
+        <div class="container first-block position-absolute">
+            
+            <div class="d-sm-flex align-items-center ">
+                <div>
+                    <p style="font-family:Helvetica;font-size:14px;color:rgb(172, 170, 170);letter-spacing: 3px;">
+                      NICOLAS TIETZ
+                    </p>
+                    <h1 style="font-size:45px;font-weight: 700;">An Aspirant <br/><span class="text-primary">Web Developer</span></h1>
+                    <!-- My image showing here when screen is small size-->
+                    <img class="img-fluid w-75 rounded shadow-lg d-block d-sm-none" src="./assets/img/portfolio-photo.png" alt="">
+
+                    <p style="color:rgb(134, 134, 134);padding-top:15px;"class="lead fw-semibold w-75">
+                        My name is Nicolas, I just started my journey at Start2Impact to become a Full Stack Web Developer!
+                    </p>
+                    <div>
+                      <a href="#about-me" class="btn btn-primary btn-lg fw-semibold ">Biography</a>
+                      <a href="#my-projects" class="btn btn-primary btn-lg fw-semibold mx-3">Projects</a>
+                      
+                    </div>
+                                  
+
+                </div>
+                <!-- My image showing here when screen is medium to higher size-->
+                <img class="img-fluid shadow-lg d-none d-sm-block my-image-2" src="./assets/img/portfolio-photo.png" alt="">
+            </div>
+        </div>
+        
+      
+        
+      </section>
+
+      <a class="go-top-btn" href="#">
+        <span class="material-symbols-outlined">
+          arrow_upward
+        </span>
+      </a>
+ 
+
+      <section id="about-me" class="about-me pt-5 d-flex flex-column justify-content-center">
+        
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-5 col-lg-4 my-auto">
+              <img class="img-fluid shadow-lg my-image-bio d-none d-md-block w-100" src="./assets/img/my-photo.jpeg" alt="" >
+
+            </div>
+            <div class="col-md-7 col-lg-7 my-auto ms-lg-5 ps-5">
+              
+                
+                <img src="./assets/img/wave-emoji.png" style="width: 40px;"><h2>Nice to meet <span class="text-primary">You!</span></h2>
+               <!-- My image showing here when screen is small size-->
+
+               <p style="padding-top:15px;width: 100%;"class="lead bio-text">
+                   I'm a 21 years old boy from Italy. I've graduated in an IT School, that i chose because of my passion for everything that is tech related.
+                   Thanks to my school i discovered the art of website making and i felt in love with it. Now, i just started my path with <a>Start2Impact</a> 
+                   to become a Full Stack Web Developer and hopefully turn my passion into a work career.
+               </p>
+               <button class="btn btn-primary fw-semibold" disabled>Read Complete Bio</button>
+               <p class="text-center" style="width: 160px;color:gray; font-size: 14px;">Coming soon</p>
+                               
+
+           
+            </div>
+            
+          </div>
+          <!-- My image showing here when screen is medium to higher size-->
+          
+      </div>
+      <div class="container skills-social">
+        <div class="row">
+          
+          <div class="col-2 mx-auto">          
+            <h2 class="d-flex justify-content-center">Skills</h2>
+            <img src="./assets/img/html-css.png" class="w-100" alt="..." style="opacity: 1;">
+          </div>
+          <div class="col-2 mx-auto my-auto">          
+            <a href="https://www.instagram.com/nicolas_tietz/"><img src="./assets/img/instagram.png" class="w-25 mx-1" alt="..." style="opacity: 1;"></a>
+            <a href="https://github.com/Nicolas-Tietz"><img src="./assets/img/github-mark.svg" class="w-25 mx-1" alt="..." style="opacity: 1;"></a>
+            <!-- Add LinkedIn account when created -->
+            <a><img src="./assets/img/LI-In-Bug.png" class="w-25 mx-1" alt="..." style="opacity: 1;"></a>
+          </div>
+          
+          
+        </div>
+          
+      </div>
+        
+      </section>
+      
+      <section id="my-projects"class="my-projects">
+        <div class="title-container d-flex justify-content-center">
+          <h2 class="mb-5 text-primary fw-bold p-2 mt-5 pulse">My Projects</h2>
+        </div>
+        <div class="container">
+          
+            <div class="card mb-3 border-0" style="box-shadow: 10px 10px 15px rgba(141, 141, 141, 0.3);">
+              <div class="row g-0">
+                <div class="col-md-7">
+                  <img src="./assets/img/example-project-1.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-md-5 my-auto" style="border-right:3px solid #0d6efd">
+                  <div class="card-body ms-5">
+                    <h3 class="card-title mb-4 text-primary">Apartment Renting</h3>
+                    <p>This is a website made for a vacation apartment located in Lido Di Pomposa.</p>
+                    <a href="./Apartment-Renting-Project/" class="btn btn-primary fw-semibold">Read Project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            
+            
+            
+            
+          
+          </div>
+        </div>
+          
+      </section>
+      <section id="contact-me" class="contact rainbow">
+        <div class="container h-100 d-flex flex-column ">
+            <div class="my-auto" 
+            data-aos="flip-up"
+            
+            data-aos-delay="200"
+            data-aos-duration="1500">
+              <div class="contact-title-container">
+                <h1 class="display-4 text-center contact-header text-primary py-5 m-0 fw-semibold" id ="contact-title">Contact me</h1>
+                
+              </div>
+              <div class="contact-form">
+               
+                
+                
+                <div class="contact-body d-flex justify-content-center py-4">
+                  <form class="d-block w-75">
+                    <div class="mb-3 w-100">
+                      <label for="exampleFormControlInput1" class="form-label fw-semibold text-white ">Email address</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3 w-100">
+                      <label for="exampleFormControlTextarea1" class="form-label fw-semibold text-white ">Message</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light fw-semibold">Send Message</button>
+                  </form>
+                </div>
+              </div>
+                
+              <div class="contact-footer text-center">
+                <h4 style="color:gray">Or send me an Email at</h4>
+                <h3 class="text-primary">nicolastietz48@gmail.com</h3>
+              </div>
+            </div>
+            
+            
+          
+            
+        </div>
+          
+      </section>
+      
+      
+        
+    
+
+
+
+  </main>
+      <script>
+        const toTop = document.querySelector(".go-top-btn")
+        window.addEventListener("scroll",()=>{
+          if(window.pageYOffset > 100){
+            toTop.classList.add("active");
+          }else{
+            toTop.classList.remove("active");
+          }
+          
+        })
+        
+        
+       
+        
+      </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
