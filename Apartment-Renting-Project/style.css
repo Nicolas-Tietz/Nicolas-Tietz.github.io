@@ -1,0 +1,97 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+    }
+    #target-area{
+        cursor: none; 
+        position: relative; 
+        left: 0px; top: 10px; 
+        width: 100%; height: 100%; 
+        background: url('../assets/img/apartment-renting-img/apartment-project.png') no-repeat;
+        background-size:100% 100%; 
+        border: solid 2px rgb(59, 177, 231);
+        border-radius: 30px; 
+    }
+    .nav-item{
+        transition: 0.6s;
+    }
+    .nav-item:hover{
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+    
+    
+    ::-webkit-scrollbar-thumb {
+        background: #0d6dfdde;
+        border-radius: 20px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0d6dfd;
+        border-radius: 20px;
+    }
+    /* These 2 change the hamburger color and border*/
+    .navbar-toggler {
+        border-color: #0d6dfd;
+    }
+    
+    .navbar-toggler .navbar-toggler-icon {
+        background-image: url(
+    "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(13, 109, 253, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    
+
+    @media (max-width:575px){
+        
+        .navbar{
+            background-color: none;
+        }
+        .navbar-collapse ul li a{
+            color:#0d6dfd;
+        }
+    }
+    /* Small devices (landscape phones, 576px and up)*/
+    @media (min-width: 576px) {
+        
+        .navbar{
+            background-color: none;
+        }
+        .navbar-collapse ul li a{
+            color:#0d6dfd;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up)*/
+    @media (min-width: 768px) {
+        
+        
+    }
+
+    /* Large devices (desktops, 992px and up)*/
+    @media (min-width: 992px) {
+        
+        .navbar{
+            background-color:#0d6dfd ;
+        }
+        .navbar-collapse ul li a{
+            color: white;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+
+    }

@@ -1,0 +1,194 @@
+body{
+  overflow-x: hidden;
+}
+section{
+    height: 100vh;
+}
+
+
+hr.rounded {
+   
+    border-top: 4px solid #0d6efd;
+    opacity: 1;
+    border-radius: 2px;
+    width: 10%;
+    margin:0 auto;
+  }
+  
+/* Contact me CSS */
+
+
+
+.contact-header{
+    
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    
+    
+}
+.contact-body{
+    background-color: #0d6efd;
+    border-radius: 20px;
+    
+}
+
+
+.nav-item{
+  transition: 0.6s;
+}
+.nav-item:hover{
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+  
+/* These 2 change the hamburger color and border*/
+.navbar-toggler {
+  border-color: #0d6dfd;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(13, 109, 253, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.nav-obj{
+  color:white;
+}
+
+
+
+/* ---------------------------------------------------------- */  
+  /* Animazione Sezione Contact-me */
+
+  :root {
+    --angle: 45deg;
+    --opacity: 0.5;
+  }
+  
+
+  .rainbow {
+    
+    border-radius: 10px;
+    padding: 2rem;
+  
+
+  
+    font-size: 1.5em;
+  
+    --border-size: 0.3rem;
+    border: var(--border-size) solid transparent;
+  
+    
+    border-image: conic-gradient(
+        from var(--angle),
+        #0d6dfd 0deg 90deg,
+        #ffffff 90deg 180deg,
+        #0d6dfd 180deg 270deg,
+        #ffffff 270deg 360deg
+      )
+      1 stretch;
+    background: rgb(255 255 255 / var(--opacity));
+  }
+  
+  /** show a warning in browers that don't support it **/
+  .warning {
+    margin: 2em;
+    padding: 1em;
+    border: 1px solid #ccc;
+  }
+  .warning p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  /* Animate when Houdini is available */
+  @supports (background: paint(houdini)) {
+    @property --opacity {
+      syntax: "<number>";
+      initial-value: 0.5;
+      inherits: false;
+    }
+  
+    @property --angle {
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+    }
+  
+    @keyframes opacityChange {
+      to {
+        --opacity: 1;
+      }
+    }
+  
+    @keyframes rotate {
+      to {
+        --angle: 360deg;
+      }
+    }
+  
+    .rainbow {
+      animation: rotate 10s linear infinite;
+    }
+  
+    /* Hide the warning */
+    .warning {
+      display: none;
+    }
+  }
+    /* -------------------------------------------------------------*/
+
+
+
+
+@media (max-width:575px){
+  .contact-body{
+    width: 100%;
+  }
+  .navbar{
+    background-color: none;
+  }
+  .navbar-collapse ul li a{
+    color:#0d6dfd;
+  }
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .contact-body{
+    width: 100%;
+  } 
+  .navbar{
+    background-color: none;
+  }
+  .navbar-collapse ul li a{
+    color:#0d6dfd;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .get-in-touch{
+        font-size: 40px;
+    }
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .get-in-touch{
+    font-size: 60px;
+    }
+    .contact-body{
+      width: 60%;
+    } 
+    .navbar{
+      background-color:#0d6dfd ;
+    }
+    .navbar-collapse ul li a{
+      color:white;
+    }
+  }
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

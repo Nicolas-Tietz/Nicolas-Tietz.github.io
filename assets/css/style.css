@@ -15,6 +15,11 @@ a:link{
     text-decoration: none;
 }
 
+#landing .container{
+    position: absolute;
+    
+}
+
 .material-symbols-outlined {
     
     padding: 10px;
@@ -53,9 +58,15 @@ a:link{
 button{
     margin-right: 20px;
 }
-
-
-
+/* These 2 change the hamburger color and border*/
+.navbar-toggler {
+    border-color: #0d6dfd;
+}
+  
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(13, 109, 253, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -86,9 +97,6 @@ button{
     animation: fadeIn 4s;
 }
 
-.first-block{
-    padding-top:5vh;
-}
 
 
 
@@ -145,122 +153,7 @@ button{
 
 
 
-/* Contact me CSS */
 
-
-
-.contact-header{
-    
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    
-    
-}
-.contact-body{
-    background-color: #0d6efd;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.contact-footer{
-    border-right:2px solid #0d6efd;
-    border-bottom:2px solid #0d6efd;
-    border-left:2px solid #0d6efd;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-}
-
-
-
-    /* Animazione Sezione Contact-me */
-
-:root {
-    --angle: 45deg;
-    --opacity: 0.5;
-  }
-  
-
-  .rainbow {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 2rem;
-  
-
-  
-    font-size: 1.5em;
-  
-    --border-size: 0.3rem;
-    border: var(--border-size) solid transparent;
-  
-    
-    border-image: conic-gradient(
-        from var(--angle),
-        #0d6dfd 0deg 90deg,
-        #ffffff 90deg 180deg,
-        #0d6dfd 180deg 270deg,
-        #ffffff 270deg 360deg
-      )
-      1 stretch;
-    background: rgb(255 255 255 / var(--opacity));
-  }
-  
-  /** show a warning in browers that don't support it **/
-  .warning {
-    margin: 2em;
-    padding: 1em;
-    border: 1px solid #ccc;
-  }
-  .warning p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  /* Animate when Houdini is available */
-  @supports (background: paint(houdini)) {
-    @property --opacity {
-      syntax: "<number>";
-      initial-value: 0.5;
-      inherits: false;
-    }
-  
-    @property --angle {
-      syntax: "<angle>";
-      initial-value: 0deg;
-      inherits: false;
-    }
-  
-    @keyframes opacityChange {
-      to {
-        --opacity: 1;
-      }
-    }
-  
-    @keyframes rotate {
-      to {
-        --angle: 360deg;
-      }
-    }
-  
-    .rainbow {
-      animation: rotate 10s linear infinite;
-    }
-  
-    /* Hide the warning */
-    .warning {
-      display: none;
-    }
-  }
-    /* -------------------------------------------------------------*/
-
-
-  
-
-
-
-
-
-/* ---------------------------------------------------------- */
 
 
 
@@ -340,10 +233,40 @@ button{
 /* Media queries */
 
 @media (max-width:575px){
-    
+    #landing .first-block{
+        position: static;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        margin-left:10px;
+    }
+    #landing .first-block div{
+        align-items: center;
+    }
+
+    .bio-text{
+        font-size: 18px;
+    }
+    .go-top-btn{
+        
+        bottom: 30px;
+        right: 20px;
+        
+    }
+
+    .first-block{
+        bottom: 5%;
+        left: 50%;
+        transform: translate(0%, -6%);
+    }
+    #first-block-text{
+        font-size:18px;
+    }
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+   
+
     .first-block{
         bottom: 5%;
         left: 50%;

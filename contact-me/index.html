@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Contact Me - Nicolas Tietz" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Here you can contact me via form for any information" />
+
+
+    <meta property="og:url" content="https://nicolas-tietz.github.io/contact-me" />
+    <meta property="og:image" content="./assets/img/landing/">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.svg">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('HwFf7O9qMhJnmQ9EE');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm('service_bk537sw', 'template_gn4vn6h', this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                      alert("Messaggio inviato con successo")
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                      alert("Errore")
+                  });
+          });
+      }
+  </script>
+  
+    <title>Contact Me | Nicolas Tietz | Web Developer</title>
+
+</head>
+<body>
+    
+    <main>
+        <nav class="navbar navbar-expand-lg " style="border-bottom-left-radius: 25%;border-bottom-right-radius: 25%;z-index: 1000;">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold" aria-current="page" href="../index.html">Portfolio</a>
+                  </li>
+                  
+              </div>
+            </div>
+          </nav>
+        
+        <section id="contact-me" class="contact">
+            
+            <div class="container-fluid h-100 d-flex flex-column ">
+                <div class="row my-auto">
+                    <div class="col-12 col-lg-7 my-auto" 
+                        data-aos="flip-up"
+                        
+                        data-aos-delay="200"
+                        data-aos-duration="2000">
+
+                        <div class="contact-title-container">
+                            <h1 class="display-3 text-center contact-header text-primary pb-3 fw-semibold" id ="contact-title">Contact me</h1>
+                            <hr class="rounded mb-2">
+                            <p class="text-center fw-semibold pt-2 mb-3" style="color:#0d6dfdc2; font-size: 18px;">Don't hesitate to contact me for any info!</p>
+                        </div>
+                    
+                        
+                        
+                        <div class="contact-body d-flex justify-content-center py-4 mx-auto" >
+                            <form id="contact-form" class="d-block w-75">
+                                
+                                <input type="hidden" name="contact_number">
+                                <label for="name-input" class="form-label fw-semibold text-white ">Name</label>
+                                <input type="text" name="from-name" class="form-control mb-5" id="name-input" placeholder="Name" required>
+                                
+                                <label for="example-form-control-input" class="form-label fw-semibold text-white ">Email address</label>
+                                <input type="email" name="email-id" class="form-control mb-5" id="example-form-control-input" placeholder="name@example.com" required>
+                                
+                                <label for="message-input" class="form-label fw-semibold text-white">Message</label>
+                                <textarea name="message" class="form-control mb-5" id="message-input" rows="3" required></textarea>
+                                
+                                <input type="submit" class="btn btn-light text-primary fw-semibold" value="Send" style="box-shadow:6px 6px 6px rgba(0,0,0,0.3)"></input>
+                            </form>
+                        </div>
+                        
+                    
+                    </div>
+                    <div class="col-4 my-auto  d-none d-lg-flex flex-column"
+                        data-aos="fade-left"                  
+                        data-aos-delay="1800"
+                        data-aos-duration="2000">
+
+                        <div class="rainbow m-4 justify-content-center align-items-center">
+                            <p class="fw-semibold text-primary get-in-touch">Get in Touch. Compile the Form</p>
+                            <img class="img-fluid w-100 rounded" src="../assets/img/contact-image.jpg"> 
+                        </div>
+                        <div>
+                            
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+              
+                
+            </div>
+              
+          </section>
+          
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
