@@ -53,6 +53,7 @@
     }
 
     
+    
 
     @media (max-width:575px){
         
@@ -62,6 +63,9 @@
         .navbar-collapse ul li a{
             color:#0d6dfd;
         }
+        .navbar-collapse ul li a:hover{
+            color:#0d6dfd;
+          }
     }
     /* Small devices (landscape phones, 576px and up)*/
     @media (min-width: 576px) {
@@ -72,6 +76,9 @@
         .navbar-collapse ul li a{
             color:#0d6dfd;
         }
+        .navbar-collapse ul li a:hover{
+            color:#0d6dfd;
+          }
     }
 
     /* Medium devices (tablets, 768px and up)*/
@@ -89,6 +96,9 @@
         .navbar-collapse ul li a{
             color: white;
         }
+        .navbar-collapse ul li a:hover{
+            color:white;
+          }
     }
 
     /* Extra large devices (large desktops, 1200px and up) */
